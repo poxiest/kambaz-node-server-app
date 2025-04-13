@@ -5,8 +5,8 @@ import * as assignmentsDao from "../Assignments/dao.js";
 export default function CourseRoutes(app) {
   app.get("/api/courses", (req, res) => {
     const courses = dao.findAllCourses();
-    console.log("All courses fetched");
     res.send(courses);
+    console.log("All courses fetched");
   });
 
   app.delete("/api/courses/:courseId", (req, res) => {
