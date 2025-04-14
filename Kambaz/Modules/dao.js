@@ -15,7 +15,7 @@ export function deleteModule(moduleId) {
   return model.deleteOne({ _id: moduleId });
 }
 
-export function updateModule(moduleId, moduleUpdates) {
-  model.updateOne({ _id: moduleId }, moduleUpdates);
+export async function updateModule(moduleId, moduleUpdates) {
+  await model.updateOne({ _id: moduleId }, moduleUpdates);
   return model.findById(moduleId);
 }
