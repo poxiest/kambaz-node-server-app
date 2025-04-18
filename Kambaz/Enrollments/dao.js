@@ -1,8 +1,12 @@
 import model from "./model.js";
 
 export async function findCoursesForUser(userId) {
+  console.log("Reached here")
   const enrollments = await model.find({ user: userId }).populate("course");
+  console.log("PLS")
   console.log(enrollments.length);
+
+  console.log(enrollments)
   return enrollments.map((enrollment) => enrollment.course);
 }
 
