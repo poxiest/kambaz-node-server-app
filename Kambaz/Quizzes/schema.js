@@ -21,6 +21,8 @@ const schema = new mongoose.Schema(
     attempts: Number,
     published: Boolean,
     description: String,
+    needsAccessCode: Boolean,
+    webcamRequired: Boolean,
     questions: [{ String }],
   },
   { collection: "quizzes" }
