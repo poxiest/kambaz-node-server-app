@@ -14,7 +14,7 @@ export const findUserAttemptsByQuizAndUser = (quizId, userId) => {
   console.log(
     `Fetching attempts for Quiz ID: ${quizId} and User ID: ${userId}`
   );
-  return model.find({ quizId: quizId, userId: userId });
+  return model.find({ quizId: quizId, userId: userId }).sort({timestamp: -1});
 };
 
 export const findUserAttemptsById = (attemptId) => {

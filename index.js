@@ -51,3 +51,5 @@ Lab5(app);
 Hello(app);
 
 app.listen(process.env.PORT || 4000);
+
+// /usr/local/mongodb-macos-aarch64-8.0.6/bin/mongod --dbpath data
